@@ -9,3 +9,5 @@ Description: Code related to my enrolment in Deakin University SIT718
 License: CC BY 4.0
 Encoding: UTF-8
 LazyData: true
+URL: https://github.com/zerogetsamgow/SIT718
+BugReports: https://github.com/zerogetsamgow/SIT718/issues
