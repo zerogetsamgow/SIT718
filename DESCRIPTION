@@ -1,0 +1,11 @@
+Package: SIT718
+Type: Package
+Title: A package containinig all mu code related to SIT718
+Version: 0.1.0
+Authors@R: c(
+    person("Sam", "gow", , "sam.gow@gmail.com", role = "crt")
+  )
+Description: Code related to my enrolment in Deakin University SIT718
+License: CC BY 4.0
+Encoding: UTF-8
+LazyData: true
