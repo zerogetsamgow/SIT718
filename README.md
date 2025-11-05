@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# SIT718
+# SIT718 Real
 
 <!-- badges: start -->
 
@@ -9,3 +9,6 @@
 
 The goal of SIT718 is to help me track my learning in the Deakin
 University course SIT718 Real World Analytics.
+
+Each weeks lecture and practical coding exercises are saved in `.qmd`
+file in the `R` folder. These files render as `reveal.js` slides.
