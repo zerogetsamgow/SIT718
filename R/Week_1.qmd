@@ -1,0 +1,128 @@
+---
+title: "Week 1"
+author: "Sam Gow"
+format: revealjs
+editor: visual
+---
+
+# Introduction
+
+Coding in week 1 is limited to introductory tasks including:
+
+---
+
+### Basic mathematical operations
+
+```{r basic_mathemetical_operations, echo = TRUE, include = TRUE}
+# Addition
+5+2
+# Subtraction
+6-8
+#Multiplication
+3*4
+# Division
+3/4
+#Powers
+3^4
+
+```
+
+---
+
+### Assignment and evaluation of variables
+
+```{r assignment_and_evaluation, echo = TRUE, include = TRUE}
+# Assignment
+a = 3
+b = 7
+the.value = 12
+the.index = 2
+the.index_2 = 3
+# Evaluation
+a * b
+the.value * a
+a^the.index + b^the.index_2
+```
+
+---
+
+### Vectors and arrays
+
+```{r vectors_arrays, echo = TRUE, include = TRUE}
+# Creating vectors and arrays
+c(3,2,1,0)
+4:8
+array(0,3)
+array(1,10)
+array(2,200)
+array(c(1,2,3), 10)
+array(c(4,5,6), 12)
+array(0, c(3,4))
+```
+
+---
+
+### Manipulating vectors and arrays
+
+```{r manipulating vectors_arrays, echo = TRUE, include = TRUE}
+# Assignment
+a = array(0,20)
+a
+# Updating
+a[5] = 1
+a[c(3,7,11)] = c(2,6,1)
+a[17:20] = c(1,2,1,4)
+a
+# Combining 
+cbind(c(1,2,3,7,9),c(21,2,1,5,6))
+cbind(c(1,2,3,7,9),c(1,9,7,2,1),array(6,5))
+
+rbind(c(3,6,1,92),c(10,3,1))
+rbind(c(3,6,1,92),c(3,2,1,8))
+rbind(c(3,6,1,92),c(4,1,12,1,2))
+```
+
+---
+
+### Basic operations on vectors
+
+```{r operations_on_vectors, echo=TRUE}
+# Combine vectors and normal numbers
+c(1,2,4) + 4
+c(1,2,3) * 3
+c(1,2,3) ^ 2
+
+#Operations between vectors
+v1 = c(1,6,7,9)
+v2 = c(-1,2,1,-2)
+
+v1 + v2
+v1 - v2
+v1 * v2
+v1/v2
+v1 ^ v2 
+```
+
+---
+
+### Existing functions
+
+```{r existing_functions, echo = TRUE}
+# Assign the following vectors
+a = c(1,8,3,9)
+b = c(2,2,1,1)
+d = c(3,4,6,81,9)
+
+# Apply functions
+sum(a)
+prod(d)
+length(b)
+sum(a*b)
+sum(a^b)
+min(d)
+max(a,d)
+
+# Apply combined functions
+prod(a)*(1/length(b))
+min(max(a),max(b))
+```
