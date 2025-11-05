@@ -5,11 +5,11 @@ format: revealjs
 editor: visual
 ---
 
-# Introduction
+# Lecture content
 
-Coding in week 1 is limited to introductory tasks including:
+Coding in week 1 lecture content is limited to introductory tasks including:
 
----
+------------------------------------------------------------------------
 
 ### Basic mathematical operations
 
@@ -27,7 +27,7 @@ Coding in week 1 is limited to introductory tasks including:
 
 ```
 
----
+------------------------------------------------------------------------
 
 ### Assignment and evaluation of variables
 
@@ -44,7 +44,7 @@ the.value * a
 a^the.index + b^the.index_2
 ```
 
----
+------------------------------------------------------------------------
 
 ### Vectors and arrays
 
@@ -60,7 +60,7 @@ array(c(4,5,6), 12)
 array(0, c(3,4))
 ```
 
----
+------------------------------------------------------------------------
 
 ### Manipulating vectors and arrays
 
@@ -82,7 +82,7 @@ rbind(c(3,6,1,92),c(3,2,1,8))
 rbind(c(3,6,1,92),c(4,1,12,1,2))
 ```
 
----
+------------------------------------------------------------------------
 
 ### Basic operations on vectors
 
@@ -103,7 +103,7 @@ v1/v2
 v1 ^ v2 
 ```
 
----
+------------------------------------------------------------------------
 
 ### Existing functions
 
@@ -126,3 +126,128 @@ max(a,d)
 prod(a)*(1/length(b))
 min(max(a),max(b))
 ```
+
+------------------------------------------------------------------------
+
+# Practical
+
+The following slides cover the content in the Week 1 practical pdf handout.
+
+## Creating new functions
+
+```{r creating_new_functions, echo = TRUE}
+## Define our own mean function 
+our_mean = function(x) {
+  sum(x)/length(x)
+}
+
+our_mean(a)
+
+our_mean(d)
+
+## An alternate form of our mean function
+
+our_mean_2 = function(x) {
+    n <- length(x) # Calculate n
+    s <- sum(x) # Calculate sum, s
+    output <- s/n  #use, s and n to calcuate output 
+    output  # Return output
+}
+
+our_mean_2(d)
+
+```
+
+------------------------------------------------------------------------
+
+## An error example
+
+The following function does not return a value as the final line of code involves an assignment.
+
+```{r nothing_happens, echo = TRUE}
+
+nothing_happens <- function(x) {
+  sum(x) +2
+  a <- prod(x)
+}
+
+```
+
+------------------------------------------------------------------------
+
+## Geometric and arithmetic mean functions.
+
+Geometric mean is calculated by multiplying a set of integers and taking the nth power root where n is the length of the set.
+
+::::: columns
+::: {.column width="65%"}
+```{r geometric_mean, echo = TRUE}
+
+geom_mean = function(x) {
+  if(length(x)==0){
+    warning("geom_mean works with objects of length 1 or greater")
+    return(NA_real_)}
+  if(min(x)<0){
+    warning("geom_mean works with positive numbers")
+    return(NA_real_)}
+  
+  # Calculate power value to use - the length of x.
+  power = length(x)
+  # Calculate product of values of x,
+  product = prod(x)
+  product^(1/power)
+}
+```
+:::
+
+::: {.column width="35%"}
+```{r geom_examples, echo = TRUE}
+
+geom_mean(a)
+
+geom_mean(
+  x = c(1,2,3))
+
+geom_mean(
+  x = c())
+
+geom_mean(
+  x = c(1,-1))
+
+```
+:::
+:::::
+
+------------------------------------------------------------------------
+
+Arithmetic mean is calculated by taking the sum of a set of numbers and dividing by the length of the set
+
+::::: columns
+::: {.column width="65%"}
+
+```{r arithmetic_mean, echo = TRUE}
+
+arithmetic_mean = function(x) {
+   if(length(x)==0){
+    warning(
+      "arithmetic_mean works with objects of length 1 or greater")
+    return(NA_real_)}
+  n = length(x)
+  s = sum(x)
+  s/n
+}
+
+```
+
+:::
+::: {.column width="35%"}
+
+``` {r arithmetic_examples, echo = TRUE}
+arithmetic_mean(a)
+
+arithmetic_mean(d)
+
+arithmetic_mean(c())
+```
+:::
+:::::
